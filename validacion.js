@@ -8,5 +8,3 @@ const enviarFormulario = () => {
 	event.preventDefault();
 	validacionFormulario(`#my_formulario`);
 }
-
-

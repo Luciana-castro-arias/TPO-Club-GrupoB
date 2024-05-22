@@ -101,13 +101,13 @@ h2 {
 .contenedor .encabezado {
     background: var(--primary-color);
     color: #fff;
-    border: solid var(--secondary-color);
     grid-area: encabezado;
 }
 
 .contenedor .contenido {
     background: #fff;
     grid-area: contenido;
+    border: solid var(--secondary-color);
 }
 
 .contenedor .sidebar {
@@ -115,13 +115,14 @@ h2 {
     grid-area: sidebar;
     margin: 0;
     padding: 0;
+    border: solid var(--secondary-color);
 }
 
 .contenedor .pie {
     background: var(--primary-color);
     color: #fff;
     grid-area: pie;
-    
+
 }
 
 .nav-links {
@@ -176,11 +177,15 @@ h2 {
     flex-wrap: wrap;
 }
 
+.img-side{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .pie {
     align-items: center;
     background-color: var(--primary-color);
-    border: solid var(--secondary-color);
     height: auto;
     width: 100%;
     flex-wrap: wrap;
@@ -213,117 +218,134 @@ h2 {
     flex-direction: initial;
 }
 
-.form-inicio-sesion{
-	margin:auto;
-	background-color: #fff;
-	width:90%;
-	max-width:500px;
-	padding:10px;
-	border:none;
-	text-align:center;
-	}
-	
+.form-inicio-sesion {
+    margin: auto;
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    text-align: center;
+}
 
-	
+
+
 /* Estilo para el sector del formulario en registrarse.html */
 .sector-form {
     background-image: url('ruta/a/tu/imagen.jpg');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    padding: 20px; /* Agrega algo de espacio alrededor del formulario */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el fondo */
+    padding: 20px;
+    /* Agrega algo de espacio alrededor del formulario */
 }
 
 /* Estilo para el contenedor del formulario */
 .contenedor-formulario-registrarse .contenedor_form {
-    max-width: 720px; /* Ancho máximo del contenedor del formulario */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    width: 100%; /* Ajusta el ancho del grupo de entrada al 100% */
-    margin-bottom: 20px; /* Agrega espacio entre cada grupo de entrada */
-    display: flex; /* Utiliza flexbox para distribuir los elementos en filas */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
-    flex-basis: calc(50% - 10px); /* Ajusta la base flexible de los campos de entrada al 50% menos el margen */
-    margin-right: 20px; /* Agrega espacio entre los campos de entrada */
-    margin-bottom: 10px; /* Agrega espacio entre las filas */
-}	
+    max-width: 720px;
+    /* Ancho máximo del contenedor del formulario */
+    margin: 0 auto;
+    /* Centra el contenedor en la página */
+    width: 100%;
+    /* Ajusta el ancho del grupo de entrada al 100% */
+    margin-bottom: 20px;
+    /* Agrega espacio entre cada grupo de entrada */
+    display: flex;
+    /* Utiliza flexbox para distribuir los elementos en filas */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en filas */
+    flex-basis: calc(50% - 10px);
+    /* Ajusta la base flexible de los campos de entrada al 50% menos el margen */
+    margin-right: 20px;
+    /* Agrega espacio entre los campos de entrada */
+    margin-bottom: 10px;
+    /* Agrega espacio entre las filas */
+}
 
-.form_title{
-	
-	font-size:32px;
-	margin-bottom:8px;
-	
-	}
+.form_title {
 
-.form_subtitle{
-	font-weight:100;
-	font-size:16px;
-	}
+    font-size: 32px;
+    margin-bottom: 8px;
+
+}
+
+.form_subtitle {
+    font-weight: 100;
+    font-size: 16px;
+}
+
 /* esto es una con su href que lleva al registro, le quite el subrayado y le puse mas onda aunque puede estar mejor*/
-.registrarse{
-	text-decoration:none;
-	color:black;
-	font-size:12px;
-	}
+.registrarse {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
 /*el formulario dispuesto en forma de columna*/
-.contenedor_form{
-	margin-top:20px;
-	margin-bottom:20px;
-	display:grid;
-	gap:20px;
-	padding:20px;
-	
+.contenedor_form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
 }
 
 /*aca adentro estan los inputs*/
-.input_group{
-	position:relative;
-	
-	}
-.form_input{
-	height:40px;
-	width:100%;
-	font-size:16px;
-	color:white	;
-	background-color:var(--third-bis-color);
-	border-radius:5px;
-	cursor:pointer;
-	
-	
-	}
+.input_group {
+    position: relative;
+
+}
+
+.form_input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    background-color: var(--third-bis-color);
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
 /*estas son las etiquetas que que se ven sobre los input del formulario*/
 
-.form_label{
-	font-size:16px;
-	color:white;
-	cursor:pointer;
-	position:absolute;
-	bottom:2px;
-	left:5px;
-	transition: transform .7s, color .2s;
-	}
-	
-/* este transform nos sirve para elevar y achicar el label cuando el usuario se fija en el input*/
-.form_input:focus + .form_label{
-/*.form_input:not(:placeholder-shown)+ .form_label{*/
-	transform: translateY(-18px) scale(.7);
-	/*y este transform es para que se pegue hacia arriba y hacia la izquierda*/
-	transform-origin:left top;
-	color:white;
-}
-/*este boton de enviar tiene un transform que le cambia el color cundo haces click*/
-.form_submit{
-	height:40px;
-	width:100%;
-	font-size:16px;
-	color:white;
-	background-color:var(--bg-input-color);
-	border-radius:5px;
-	cursor:pointer;
-	transform: color ,6s;
+.form_label {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    transition: transform .7s, color .2s;
 }
 
-.form_submit:focus{
-	color:black;
-	background-color:pink;
+/* este transform nos sirve para elevar y achicar el label cuando el usuario se fija en el input*/
+.form_input:focus+.form_label {
+    /*.form_input:not(:placeholder-shown)+ .form_label{*/
+    transform: translateY(-18px) scale(.7);
+    /*y este transform es para que se pegue hacia arriba y hacia la izquierda*/
+    transform-origin: left top;
+    color: white;
 }
+
+/*este boton de enviar tiene un transform que le cambia el color cundo haces click*/
+.form_submit {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    background-color: var(--bg-input-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transform: color, 6s;
+}
+
+.form_submit:focus {
+    color: black;
+    background-color: pink;
+}
+
 /*a este ecudo le puse el borde solo para distinguir su area*/
 
 
