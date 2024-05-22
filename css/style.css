@@ -322,6 +322,7 @@ li {
 }
 
 
+
 @media screen and (max-width: 768px) {
     .contenedor {
         grid-template-areas: "encabezado encabezado encabezado"
