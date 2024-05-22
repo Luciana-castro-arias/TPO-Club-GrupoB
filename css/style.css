@@ -118,6 +118,7 @@ li {
     background: var(--primary-color);
     color: #fff;
     grid-area: pie;
+    
 }
 
 .nav-links {
