@@ -1,0 +1,226 @@
+:root {
+    --bg-color: #fff;
+    --primary-color: #fe0002;
+    --secondary-color: #fff;
+    --third-color: #820303;
+    --third-bis-color: #420a0af2;
+    --bg-input-color: #863939;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'work-sans', sans-serif;
+    margin-bottom: 0;
+    font-weight: 100;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #000;
+
+}
+
+a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+}
+
+a:before,
+a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transition: left .8s;
+}
+
+a:hover:before {
+    left: 0;
+}
+
+a:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: -100%;
+    background: #ffffff;
+    transition: right .8s;
+}
+
+a:hover:after {
+    right: 0;
+}
+
+
+li {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+
+
+.contenedor {
+    width: 100%;
+    max-width: 1500px;
+    margin: 10px auto;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    /*4 filas: header, contenido, sidebar, footer*/
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado"
+        "contenido contenido sidebar"
+        "contenido contenido sidebar"
+        "pie pie pie";
+}
+
+.contenedor>div,
+.contenedor .encabezado,
+.contenedor .contenedor,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    /* border-radius: 4px; */
+}
+
+.contenedor .encabezado {
+    background: var(--primary-color);
+    color: #fff;
+    grid-area: encabezado;
+}
+
+.contenedor .contenido {
+    background: #fff;
+    grid-area: contenido;
+}
+
+.contenedor .sidebar {
+    background: var(--secondary-color);
+    grid-area: sidebar;
+    border: solid var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor .pie {
+    background: var(--primary-color);
+    color: #fff;
+    grid-area: pie;
+}
+
+.nav-links {
+    margin: auto;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: #000;
+
+}
+
+.nav-st-1 {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.hijo {
+    background-color: var(--primary-color);
+    height: 50px;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.img-banner {
+    width: 10%;
+    height: auto;
+}
+
+.nav a:hover {
+    color: var(--secondary-color);
+}
+
+.events {
+    border: solid var(--primary-color);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.pie {
+    align-items: center;
+    background-color: var(--primary-color);
+    border: solid var(--primary-color);
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.info-pie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.foot {
+    text-decoration: underline var(--secondary-color);
+}
+
+.otr-pie {
+    font-style: italic;
+}
+
+.inv {
+    color: var(--primary-color);
+}
+
+.historia {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: initial;
+}
+
+#primeros-años {
+    width: 90%;
+    float: left;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado"
+            "contenido contenido sidebar"
+            "sidebar sidebar sidebar"
+            "pie pie pie";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado"
+            "contenido contenido contenido"
+            "sidebar sidebar sidebar"
+            "pie pie pie";
+    }
+}
