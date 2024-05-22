@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
 
     <!-- CSS externo -->
-    <link rel="stylesheet" href="./css/template.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!-- Favicon -->
     <link rel="icon" href="./img/favicon-32x32.png">
@@ -32,7 +31,7 @@
                     <div class="nav-st-1"><a href="./index.html">Inicio</a></div>
                     <div class="nav-st-1"><a href="./quienes-somos.html">Nuestra historia</a></div>
                     <div class="nav-st-1"><a href="./actividades.html">Actividades</a></div>
-                    <div class="nav-st-1"><a href="./registro.html">Iniciar sesión</a></div>
+                    <div class="nav-st-1"><a href="./iniciar-sesion.html">Iniciar sesión</a></div>
                     <div class="hijo"></div>
                     <div class="hijo"></div>
                     <div class="hijo"></div>
@@ -42,12 +41,81 @@
                 </div>
             </nav>
         </header>
-
-        <main>
+        <main class="contenido">
+            <div class="sector-form">
+                <div class="contenedor-formulario-registrarse">
+                    <form class="form" target="">
+                        <h1 class="form_title">Iniciar sesión</h1>
+                        <p class="form_subtitle">¿Aún no tienes cuenta?</p>
+                        <p><a href="" class="registrarse">Regístrate aquí</a></p>
+                        <div class="contenedor_form">
+                            <div class="input_group">
+                                <input type="text" id="nombre" class="form_input" placeholder="">
+                                <label for="nombre" class="form_label">Nombre</label>
+                                <span class="form_span"></span>
+                            </div>
+                            <div class="input_group">
+                                <input type="text" id="apellido" class="form_input" placeholder="">
+                                <label for="apellido" class="form_label">Apellido</label>
+                                <span class="form_span"></span>
+                            </div>
+                            <div class="input_group">
+                                <input type="text" id="nombre_usuario" class="form_input" placeholder="">
+                                <label for="nombre_usuario" class="form_label">Nombre de usuario</label>
+                                <span class="form_span"></span>
+                            </div>
+                            <div class="input_group">
+                                <input type="email" id="correo" class="form_input" placeholder="">
+                                <label for="correo" class="form_label">Correo</label>
+                                <span class="form_span"></span>
+                            </div>
+                            <div class="input_group">
+                                <input type="password" id="contraseña" class="form_input" placeholder="">
+                                <label for="contraseña" class="form_label">Contraseña</label>
+                                <span class="form_span"></span>
+                            </div>
+                            <div class="input_group">
+                                <input type="password" id="repetir_contraseña" class="form_input" placeholder="">
+                                <label for="repetir_contraseña" class="form_label">Repetir contraseña</label>
+                                <span class="form_span"></span>
+                            </div>
+                            <div class="input_group">
+                                <input type="tel" id="telefono" class="form_input" placeholder="">
+                                <label for="telefono" class="form_label">Teléfono</label>
+                                <span class="form_span"></span>
+                            </div>
+                            <div class="input_group">
+                                <label for="genero">Género:</label>
+                                <select id="genero" name="genero">
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="input_group">
+                                <label>Acepto términos y condiciones:</label>
+                                <div class="radio_group">
+                                    <input type="radio" id="acepto" name="terminos" value="acepto"> <label
+                                        for="acepto">Sí</label>
+                                    <input type="radio" id="noAcepto" name="terminos" value="noAcepto"> <label
+                                        for="noAcepto">No</label>
+                                </div>
+                            </div>
+                            <div class="input_group">
+                                <label>Quiero recibir información por:</label>
+                                <div class="radio_group">
+                                    <input type="radio" id="recibirCorreo" name="informacion" value="correo"> <label
+                                        for="recibirCorreo">Correo</label>
+                                    <input type="radio" id="recibirTelefono" name="informacion" value="telefono"> <label
+                                        for="recibirTelefono">Teléfono</label>
+                                </div>
+                            </div>
+                            <input type="submit" class="form_submit" value="Entrar">
+                        </div>
+                    </form>
+                </div>
 
         </main>
-       
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer class="pie">
             <div class="info-pie">
                 <div>
@@ -77,11 +145,11 @@
                         <li class="inv">5</li>
                     </ul>
                 </div>
+
                 <div class="otr-pie">
                     <h3>@Grupo B 2024</h3>
                 </div>
             </div>
-
         </footer>
     </div>
 </body>
