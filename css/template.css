@@ -13,8 +13,6 @@
     box-sizing: border-box;
     font-family: 'work-sans', sans-serif;
     margin-bottom: 0;
-    font-weight: 100;
-    
 }
 
 body {
@@ -110,6 +108,11 @@ li {
     color: #fff;
     grid-area: pie;
 }
+
+.titulo-header{
+    text-align: center;
+}
+
 
 .nav-links {
     margin: auto;
